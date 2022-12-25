@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Document</title>
+        <link rel="stylesheet" type="text/css" href="kodi.css">
+    
+    
+        
+
+        
+        </head>
+        <main>
+            <body>
+                
+                
+                    
+                
+                    
+               
+                    
+            
+            
+                <form >
+                    <h1>Log In</h1>
+                    
+                    <input type="text" placeholder="Username" id="username" name="username" class="username"><br>
+                    <label style="color: red;" for="Name" id="usernameMessage"></label><br>
+                    
+                    <input type="password" placeholder="Enter Password" id="password" name="password" class="paswordi"><br>
+                  <div class="aa">Forgot Password?</div>
+                    <button type="submit" class="butoni" id="login" value="login">Log In</button>
+                    <div class="signup">Not a member? <a href="register.html">Sign Up</a></div>
+                  </form>
+                  <script>
+                    var usernameRegex = /^[A-Z][a-z]{2-10}/;
+                    
+                    
+                    var loginButton = document.getElementById("login");
+                    var usernameMsg = document.getElementById("usernameMessage");
+                    
+                    loginButton.addEventListener("click", function(event){
+                        var username = document.getElementById("username").value;
+                     
+                        if(username == ""){
+                            usernameMsg.innerText="Fill Username"
+                            event.preventDefault();
+                        }
+                        else{
+                            if(usernameRegex.test(username)){
+                                alert("Username:"+username);
+                            }else{
+                                usernameMsg.innerText="Correct"
+                                event.preventDefault();
+                            }
+                        }
+                        
+
+                    }
+                    
+                    )
+                  </script>
+        </body>
+        
+            
+            
+
+
+
+        </main>
+   
+    </body>
+</html>
